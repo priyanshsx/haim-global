@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Business | Overview</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Updated favicon to use an orange fill so it pops on lighter browser tabs -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='orange'>∑</text></svg>">
+    <style>
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #FAF9F6; /* Pale off-white background */
+            color: #111827; /* Dark charcoal for primary text readability */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 600px;
+            padding: 40px;
+            background-color: #FFFFFF; /* Pure white card */
+            border-radius: 12px;
+            /* Subtle warm shadow to match the orange theme */
+            box-shadow: 0 10px 40px rgba(234, 88, 12, 0.08); 
+            border: 1px solid #E5E7EB;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-top: 0;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+            font-weight: 600;
+        }
+        p.mission {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #4B5563; /* Medium gray for secondary text */
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        .contact-card {
+            border-top: 1px solid #E5E7EB;
+            padding-top: 24px;
+        }
+        .contact-item {
+            margin-bottom: 16px;
+        }
+        .label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #EA580C; /* Vibrant orange for labels */
+            margin-bottom: 6px;
+            display: block;
+            font-weight: 600;
+        }
+        .value {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        button {
+            background-color: #EA580C; /* Vibrant orange button */
+            color: #FFFFFF;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 12px;
+            transition: background-color 0.2s, transform 0.1s;
+            font-family: 'Inter', sans-serif;
+        }
+        button:hover {
+            background-color: #C2410C; /* Darker orange on hover */
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Venturing into the chaos, defining innovation.</h1>
+        <p class="mission">Haim Global invests in defining companies that operate at the helm of technological innovation.</p>
+        
+        <div class="contact-card">
+            <div class="contact-item">
+                <span class="label">Headquarters</span>
+                <span class="value">Noida, Uttar Pradesh, India</span>
+            </div>
+            
+            <div class="contact-item">
+                <span class="label">Contact</span>
+                <span class="value" id="email-text">saxenapriyansh95@gmail.com</span><br>
+                <button onclick="copyEmail()">Copy Email</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function copyEmail() {
+            const email = document.getElementById("email-text").innerText;
+            navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard!");
+            });
+        }
+    </script>
+
+</body>
+</html>
